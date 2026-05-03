@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Checklist App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER CON LOGO -->
+  <header class="header">
+
+    <div class="logo-container">
+      <img src="LaUnica.png" alt="Logo Empresa" class="logo">
+    </div>
+
+    <h1>Checklist Diario</h1>
+
+  </header>
+
+
+  <!-- BOTONES SUPERIORES -->
+  <div class="top-buttons">
+
+    <button class="btn logout-btn" onclick="logout()">
+      Cerrar sesión
+    </button>
+
+  </div>
+
+
+  <!-- LISTA DE TAREAS -->
+  <div id="tasks" class="tasks-container"></div>
+
+
+  <script type="module" src="app.js"></script>
+
+</body>
+</html>

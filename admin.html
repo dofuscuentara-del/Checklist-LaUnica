@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel Admin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <img src="LaUnica.png" class="logo">
+    <h1>Panel Administrador</h1>
+  </header>
+
+  <div class="top-buttons">
+    <button class="btn logout-btn" onclick="logout()">Cerrar sesión</button>
+    <button class="btn add-btn" onclick="addTask()">Agregar tarea</button>
+    
+  </div>
+
+  <div id="adminTasks" class="tasks-container"></div>
+
+  <div id="deleteModal" class="modal">
+  <div class="modal-content">
+
+    <h3>Eliminar tarea</h3>
+    <p>¿Seguro que deseas eliminar esta tarea?</p>
+
+    <div class="modal-actions">
+      <button class="cancel-btn" onclick="closeDeleteModal()">Cancelar</button>
+      <button class="confirm-delete-btn" onclick="confirmDelete()">Eliminar</button>
+    </div>
+
+  </div>
+</div>
+
+  <script type="module" src="admin.js"></script>
+
+</body>
+
+</html>

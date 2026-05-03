@@ -1,0 +1,427 @@
+/* RESET */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: #f4f6f9;
+}
+
+
+/* HEADER */
+
+.header {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 110px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+
+/* BOTONES SUPERIORES */
+
+.top-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px;
+}
+
+.btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}
+
+.admin-btn {
+  background: #037cfd;
+  color: white;
+}
+
+.add-btn {
+  background: #27ae60;
+  color: white;
+}
+
+.add-btn:hover {
+  background: #1e8449;
+}
+
+
+/* CONTENEDOR TAREAS */
+
+.tasks-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 10px;
+}
+
+
+/* TARJETAS DE TAREAS */
+
+.task-card {
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 15px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.task-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.task-status {
+  margin-bottom: 12px;
+  color: #555;
+}
+
+
+/* BOTÓN FINALIZAR */
+
+.complete-btn {
+  background: #2980b9;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.complete-btn:hover {
+  background: #21618c;
+}
+
+
+/* RESPONSIVE (CELULAR) */
+
+@media (max-width: 600px) {
+
+  .logo {
+    width: 60px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+}
+
+/* LOGIN */
+
+.login-body {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+.login-logo {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background: #1e8449;
+}
+
+/* ADMIN HEADER AJUSTE */
+
+.header {
+  background: #1f2d3d;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 22px;
+}
+
+
+/* IMAGEN DE TAREA */
+
+.task-image {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+
+/* SIN FOTO */
+
+.no-photo {
+  margin-top: 10px;
+  padding: 10px;
+  background: #ecf0f1;
+  border-radius: 8px;
+  color: #7f8c8d;
+  text-align: center;
+}
+
+
+/* MEJORA VISUAL TARJETAS */
+
+.task-card {
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 15px;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.task-card:hover {
+  transform: scale(1.02);
+}
+
+
+/* RESPONSIVE ADMIN */
+
+@media (max-width: 600px) {
+
+  .task-image {
+    max-width: 100%;
+  }
+
+}
+
+/* CÁMARA */
+
+.camera-area {
+  position: relative;
+  margin-top: 15px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #e5e7eb;
+  height: 220px;
+  cursor: pointer;
+}
+
+.camera-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.camera-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.camera-text {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.capture-btn {
+  display: none;
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  border: 5px solid white;
+  background: #ef4444;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+.close-camera-btn {
+  display: none;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.65);
+  color: white;
+  font-size: 26px;
+  line-height: 1;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* COMENTARIOS */
+
+.comment-box {
+  width: 100%;
+  max-width: 400px;
+  margin: 15px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-comment {
+  width: 100%;
+  min-height: 80px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  resize: none;
+}
+
+.task-comment:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.update-btn {
+  align-self: flex-end;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.update-btn:hover {
+  background: #1e40af;
+}
+
+
+/* ICONO X */
+.delete-icon {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 20px;
+  color: #ef4444;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.delete-icon:hover {
+  color: #b91c1c;
+}
+
+/* TARJETA RELATIVE */
+.task-card {
+  position: relative;
+}
+
+
+/* MODAL */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.6);
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 999;
+}
+
+/* CONTENIDO */
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+  animation: fadeIn 0.2s ease;
+}
+
+/* BOTONES */
+.modal-actions {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancel-btn {
+  padding: 8px 14px;
+  border: none;
+  background: #9ca3af;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.confirm-delete-btn {
+  padding: 8px 14px;
+  border: none;
+  background: #dc2626;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.confirm-delete-btn:hover {
+  background: #991b1b;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
